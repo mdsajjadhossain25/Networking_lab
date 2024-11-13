@@ -21,42 +21,35 @@ class Email{
 
 
     send("EHLO smtp.gmail.com\r\n");
-              System.out.println("SERVER: "+ br.readLine());
-              System.out.println("SERVER: "+ br.readLine());
-              System.out.println("SERVER: "+ br.readLine());
-              System.out.println("SERVER: "+ br.readLine());
-              System.out.println("SERVER: "+ br.readLine());
-              System.out.println("SERVER: "+ br.readLine());
-              System.out.println("SERVER: "+ br.readLine());
-              System.out.println("SERVER: "+ br.readLine());
-              System.out.println("SERVER: "+ br.readLine());
-
+    for(int i=0; i<9; i++){
+      System.out.println("SERVER: "+ br.readLine());
+    }
 
     
     send("AUTH LOGIN\r\n");
-              System.out.println("SERVER: "+ br.readLine());
+    System.out.println("SERVER: "+ br.readLine());
 
 
     send(username + "\r\n");
-              System.out.println("SERVER: "+ br.readLine());
+    System.out.println("SERVER: "+ br.readLine());
 
 
 
     send(password + "\r\n");
-              System.out.println("SERVER: "+ br.readLine());
+    System.out.println("SERVER: "+ br.readLine());
 
 
     send("MAIL FROM:<s2011176125@ru.ac.bd>\r\n");
-              System.out.println("SERVER: "+ br.readLine());
+    System.out.println("SERVER: "+ br.readLine());
 
 
     send("RCPT TO:<hmdsajjad840@gmail.com>\r\n");
-              System.out.println("SERVER: "+ br.readLine());
+    System.out.println("SERVER: "+ br.readLine());
 
 
 
     send("DATA\r\n");
-            System.out.println("SERVER: "+ br.readLine());
+    System.out.println("SERVER: "+ br.readLine());
 
 
     send("FROM: s2011176125@ru.ac.bd\r\n");
@@ -64,7 +57,7 @@ class Email{
     send("Subject: Email test" + LocalDateTime.now() + "\r\n");
     send("THIS IS A TEST EMAIL. THANK YOU\r\n");
     send(".\r\n");
-          System.out.println("SERVER: "+ br.readLine());
+    System.out.println("SERVER: "+ br.readLine());
 
 
           
